@@ -1,0 +1,29 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "pm2 start index.js --name weatherapp",
+    "poststart": "pm2 log weatherapp",
+    "dev": "nodemon index.js",
+    "stop": "pm2 stop weatherapp",
+    "debug": "nodemon --inspect index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "body-parser": "^1.19.0",
+    "cor": "0.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "hotnode": "0.0.8",
+    "mongoose": "^5.10.8",
+    "pm2": "^4.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
