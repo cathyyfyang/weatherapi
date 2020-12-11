@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true
 }));
- 
+
 // 设置跨域访问
 app.all('*', function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");// 这里设置允许所有跨域访问
@@ -22,7 +22,7 @@ app.all('*', function (req, res, next) {
  
 //响应get请求
 app.get('/', function (req, res) {
-    res.send('node启动成功');
+    res.send('node start to work');
 })
  
 //响应post请求
@@ -34,7 +34,7 @@ app.post('/', function (req, res) {
         // 创建模版实例，导入数据，在这之前你可以对数据做任何处理，比如密码md5加密
         const user = new User({
             phone: registerData.phone,
-            username: registerData.useName,
+            username: registerData.userName,
             password: registerData.passWord,
             date: (new Date()).getTime()
         })
